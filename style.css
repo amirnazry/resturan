@@ -1,0 +1,36 @@
+body {
+  margin: 0;
+  font-family: "Franklin Gothic Medium", "vazir", sans-serif;
+}
+header {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  background-color: aqua;
+  justify-content: space-between;
+}
+header .right-section {
+  background-color: lightblue;
+  display: flex;
+  align-items: center;
+}
+
+header .mid-section {
+  background-color: lightcoral;
+}
+header .left-section {
+  background-color: lightgreen;
+}
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.main-box {
+  background-color: lightcoral;
+  text-align: center;
+  width: 50%;
+}
+.slider {
+  background-color: lightgrey;
+}
