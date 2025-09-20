@@ -61,6 +61,9 @@
       margin-top: 0;
       font-family: monospace;
     }
+    h4 {
+      margin: 0;
+    }
   </style>
   <body>
     <div>
@@ -70,6 +73,9 @@
         method="get"
         onsubmit="return checkuser()"
       >
+        <a href="index.html">
+          <h4>صفحه اصلی</h4>
+        </a>
         <h1>Login</h1>
         <input type="text" placeholder="Username" id="username" required />
         <input type="password" placeholder="Password" id="password" required />
@@ -81,11 +87,13 @@
 
     <script>
       function checkuser() {
+        const username = document.getElementById("username");
+        const password = document.getElementById("password");
         const usernames = ["admin"];
-        const Passwords = ["admin"];
+        const passwords = ["admin"];
         if (
-          (usernames.includes(username.value),
-          Passwords.includes(Password.value))
+          usernames.includes(username.value) &&
+          passwords.includes(password.value)
         ) {
           return true;
         }
