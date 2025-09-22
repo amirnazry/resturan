@@ -1,6 +1,7 @@
 body {
   margin: 0;
-  font-family: "Franklin Gothic Medium", "vazir", sans-serif;
+  font-family: yekan, sans-serif;
+  background-color: rgb(255, 246, 234);
 }
 header {
   display: flex;
@@ -11,30 +12,96 @@ header {
 }
 header .right-section {
   background-color: lightblue;
+}
+nav {
+  padding: 0;
+}
+nav ul {
+  display: flex;
+  list-style: none;
+  padding: 0;
+}
+nav li {
+  padding-right: 10px;
+}
+nav ul li a {
+  color: #000000;
+  text-decoration: none;
+}
+header .mid-section {
+  background-color: lightskyblue;
+}
+header .left-section {
+  background-color: lightgreen;
   display: flex;
   align-items: center;
 }
 
-header .mid-section {
-  background-color: lightcoral;
-}
-header .left-section {
-  background-color: lightgreen;
-}
 main {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 .main-box {
-  background-color: lightcoral;
+  /* background-color: lightcoral; */
   text-align: center;
   width: 50%;
-}
-.slider {
-  background-color: lightgrey;
 }
 #search-box {
   border-radius: 10px;
   margin: 15px;
+  border: solid 1px;
+}
+section {
+  display: flex;
+  justify-content: space-evenly;
+}
+.sidebar {
+  background-color: lightseagreen;
+  border-radius: 15px;
+  padding: 20px;
+}
+.sidebar-items {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.foodlists {
+  /* background-color: lightslategray; */
+}
+.foodbox {
+  display: flex;
+  align-items: center;
+  width: 500px;
+  justify-content: space-between;
+  padding: 10px;
+  background-color: white;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+.item {
+  /* background-color: lightcoral; */
+}
+.caption {
+  /* background-color: lightsalmon; */
+  margin: 0;
+}
+.caption h6 {
+  color: #8d8d8d;
+  margin: 0;
+}
+.caption h4 {
+  margin: 0;
+}
+.caption h3 {
+  color: #00a850;
+}
+.caption img {
+  background-color: rgb(231, 231, 231);
+  border-radius: 20px;
+  padding: 10px;
+  margin-right: 10px;
+}
+.image img {
+  border-radius: 10px;
 }
