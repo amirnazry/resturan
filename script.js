@@ -12,9 +12,7 @@ const foods = [
         url : "images/lghome.jpg"
     }
 ]
-const foodname = document.getElementById("foodname")
-const weghit = document.getElementById("weghit")
-const price = document.getElementById("price")
+
 const item = document.getElementById("item")
 
 for (let i = 0; i < foods.length; i++) {
