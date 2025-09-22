@@ -1,15 +1,36 @@
-const foods = {
-    iranianfoods:{
+const foods = [
+    {
         name : "برگ",
         weight : "280 گرم",
-        price : "920,000 تومان"
+        price : "920,000 تومان",
+        url : "images/barg.jpg"
+    },
+    {
+        name : "لقمه",
+        weight : "280 گرم",
+        price : "920,000 تومان",
+        url : "images/lghome.jpg"
     }
-}
-console.log(foods);
+]
 const foodname = document.getElementById("foodname")
 const weghit = document.getElementById("weghit")
 const price = document.getElementById("price")
+const item = document.getElementById("item")
 
-foodname.innerHTML = foods.iranianfoods.name
-weghit.innerHTML = foods.iranianfoods.weight
-price.innerHTML = foods.iranianfoods.price
+for (let i = 0; i < foods.length; i++) {
+item.innerHTML += `
+            <div class="foodbox">
+                <div class="caption">
+                  <h4 id="foodname">${foods[i].name}</h4>
+                  <h6 id="weghit">${foods[i].weight}</h6>
+                  <h3 id="price">${foods[i].price}</h3>
+                  <img src="images/belss.png" alt="" width="20" />
+                  <img src="images/menu.png" alt="" width="20px" />
+                </div>
+    
+                <div class="image">
+                  <img src="${foods[i].url}" alt="" width="120" />
+                </div>
+            </div>`
+    
+}
