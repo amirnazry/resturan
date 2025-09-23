@@ -36,7 +36,29 @@ header .left-section {
   display: flex;
   align-items: center;
 }
-
+.left-section img {
+  margin-left: 10px;
+}
+.shopsidebar {
+  background-color: lightcoral;
+  width: 250px;
+  position: fixed;
+  z-index: 100;
+  left: 0;
+  top: 0;
+  height: 100%;
+  display: none;
+}
+.shopitems {
+  display: flex;
+  align-items: center;
+  width: 200px;
+  justify-content: space-between;
+  padding: 10px;
+  background-color: white;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
 main {
   display: flex;
   flex-direction: column;

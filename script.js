@@ -7,8 +7,8 @@ const foods = [
     },
     {
         name : "لقمه",
-        weight : "280 گرم",
-        price : "920,000 تومان",
+        weight : "360 گرم",
+        price : "520,000 تومان",
         url : "images/lghome.jpg"
     }
 ]
@@ -22,7 +22,7 @@ item.innerHTML += `
                   <h4 id="foodname">${foods[i].name}</h4>
                   <h6 id="weghit">${foods[i].weight}</h6>
                   <h3 id="price">${foods[i].price}</h3>
-                  <img src="images/shopping.svg" alt="" width="18" onclick="shopbuket()" />
+                  <img src="images/shopping.svg" alt="" width="18" onclick="shopbuket(${i})" />
                   <img src="images/favorit.svg" alt="" width="18"  />
                 </div>
     
@@ -33,24 +33,38 @@ item.innerHTML += `
     
 }
 
+const shopBuket = []
 
-const shopBuket = [
-  {
-    1 : 41
-  }
-]
-console.log(shopBuket);
 
 const buketModal = document.getElementById("shop-modal")
-function shopbuket(){
+function shopbuket(index){
   buketModal.style.display = "block" 
   setTimeout(()=> buketModal.style.display = "none" 
   ,2000)
+  
+  shopBuket.push(foods[index])
+  
 
-shopBuket.push(foods[0])
+  const shopsidebar = document.getElementById("shopsidebar").innerHTML += `
+              <div class="shopitems">
+                <div class="caption">
+                    <h4 id="foodname">${shopBuket[shopBuket.length-1].name}</h4>
+                    <h6 id="weghit">${shopBuket[shopBuket.length-1].weight}</h6>
+                    <h3 id="price">${shopBuket[shopBuket.length-1].price}</h3>
+                </div>
+      
+                <div class="image">
+                  <img src="${shopBuket[shopBuket.length-1].url}" alt="" width="120" />
+                </div>
+              </div>`
+}
+
+
+const showshopbtn = document.getElementById("showshopbtn")
+function showshop(){
+  shopsidebar.style.display = "block"
+}
+function closeShop(){
+  shopsidebar.style.display = "none"
 
 }
-console.log(shopBuket.push(foods));
-
-
-
