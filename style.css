@@ -72,12 +72,15 @@ section {
 .foodbox {
   display: flex;
   align-items: center;
-  width: 500px;
+  width: 700px;
   justify-content: space-between;
   padding: 10px;
   background-color: white;
   border-radius: 10px;
   margin-bottom: 10px;
+}
+.foodbox:hover {
+  cursor: pointer;
 }
 .item {
   /* background-color: lightcoral; */
@@ -101,7 +104,53 @@ section {
   border-radius: 20px;
   padding: 10px;
   margin-right: 10px;
+  transition: 0.2s;
+}
+.caption img:hover {
+  background-color: #00a850;
 }
 .image img {
   border-radius: 10px;
+}
+.shop-modal {
+  background-color: #00a850;
+  width: 250px;
+  left: 20px;
+  bottom: 20px;
+  position: fixed;
+  display: none;
+  transition: 1s;
+}
+.shop-modal input {
+  margin: 0 10px 10px 0;
+  background-color: orange;
+  border: none;
+  color: white;
+  padding: 5px;
+  font-size: large;
+  font-family: yekan;
+}
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  ...;
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+  ...;
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+  ...;
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+  ...;
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+  ...;
 }
