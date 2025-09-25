@@ -18,9 +18,9 @@
           </ul>
         </nav>
       </div>
-      <div class="mid-section">
+      <!-- <div class="mid-section">
         <input type="search" id="search-box" />
-      </div>
+      </div> -->
       <div class="left-section">
         <a href="loginpage.html"
           ><img src="images/profile.png" alt="" width="50"
@@ -33,9 +33,12 @@
         />
       </div>
     </header>
-    <div class="shopsidebar" id="shopsidebar">
-      سبد خرید:
-      <button onclick="closeShop()">X</button>
+    <div class="backshopsidebar" id="backshopsidebar">
+      <div class="shopsidebar" id="shopsidebar">
+        <h4 style="display: inline">سبد خرید</h4>
+        <button onclick="closeShop()" id="closebtn">X</button>
+        <h2 id="totalprice">مجموع قیمت:</h2>
+      </div>
     </div>
     <main>
       <div class="main-box">
@@ -99,7 +102,7 @@
     <div class="shop-modal" id="shop-modal">
       <img src="images/shopping.svg" alt="" />
       <h5>این کالا به سبد شما اضافه شد</h5>
-      <input type="button" value="مشاهد سبد خرید" />
+      <input type="button" value="مشاهد سبد خرید" onclick="showshop()" />
     </div>
     <script src="script.js"></script>
   </body>

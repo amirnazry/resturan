@@ -2,13 +2,34 @@ const foods = [
     {
         name : "برگ",
         weight : "280 گرم",
-        price : "920,000 تومان",
+        price : 920000,
         url : "images/barg.jpg"
     },
     {
         name : "لقمه",
         weight : "360 گرم",
-        price : "520,000 تومان",
+        price : 520000,
+        url : "images/lghome.jpg"
+    }
+    ,
+    {
+        name : "پلو",
+        weight : "360 گرم",
+        price : 520000,
+        url : "images/lghome.jpg"
+    }
+    ,
+    {
+        name : "کباب",
+        weight : "360 گرم",
+        price : 520000,
+        url : "images/lghome.jpg"
+    }
+    ,
+    {
+        name : "برنج",
+        weight : "360 گرم",
+        price : 520000,
         url : "images/lghome.jpg"
     }
 ]
@@ -44,7 +65,6 @@ function shopbuket(index){
   
   shopBuket.push(foods[index])
   
-
   const shopsidebar = document.getElementById("shopsidebar").innerHTML += `
               <div class="shopitems">
                 <div class="caption">
@@ -57,14 +77,18 @@ function shopbuket(index){
                   <img src="${shopBuket[shopBuket.length-1].url}" alt="" width="120" />
                 </div>
               </div>`
+              
 }
 
 
 const showshopbtn = document.getElementById("showshopbtn")
 function showshop(){
   shopsidebar.style.display = "block"
+  backshopsidebar.style.display = "block"
 }
 function closeShop(){
   shopsidebar.style.display = "none"
+  backshopsidebar.style.display = "none"
 
 }
+totalprice.innerHTML += foods[0].price + foods[1].price + " تومان"

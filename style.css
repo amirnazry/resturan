@@ -1,17 +1,21 @@
 body {
   margin: 0;
   font-family: yekan, sans-serif;
-  background-color: rgb(255, 246, 234);
+  background-color: #fff6ea;
+  margin-top: 50px;
 }
 header {
   display: flex;
   flex-direction: row;
   width: 100%;
-  background-color: aqua;
+  background-color: lightseagreen;
   justify-content: space-between;
+  position: fixed;
+  top: 0;
+  left: 0;
 }
 header .right-section {
-  background-color: lightblue;
+  /* background-color: lightblue; */
 }
 nav {
   padding: 0;
@@ -29,25 +33,52 @@ nav ul li a {
   text-decoration: none;
 }
 header .mid-section {
-  background-color: lightskyblue;
+  /* background-color: lightskyblue; */
 }
 header .left-section {
-  background-color: lightgreen;
+  /* background-color: lightgreen; */
   display: flex;
   align-items: center;
 }
 .left-section img {
   margin-left: 10px;
 }
+.left-section img:hover {
+  cursor: pointer;
+}
+.backshopsidebar {
+  background-color: #000000bc;
+  width: 100%;
+  height: 100vh;
+  z-index: 10001;
+  position: fixed;
+  top: 0;
+  left: 250px;
+  display: none;
+}
 .shopsidebar {
-  background-color: lightcoral;
-  width: 250px;
+  background-color: white;
+  width: 235px;
   position: fixed;
   z-index: 100;
   left: 0;
   top: 0;
   height: 100%;
   display: none;
+  padding: 15px;
+  overflow-y: scroll;
+}
+#closebtn {
+  background: none;
+  border: none;
+  color: red;
+  font-size: large;
+  float: left;
+  transition: 0.2s;
+}
+#closebtn:hover {
+  cursor: pointer;
+  scale: 1.1;
 }
 .shopitems {
   display: flex;
@@ -89,7 +120,6 @@ section {
   align-items: center;
 }
 .foodlists {
-  /* background-color: lightslategray; */
 }
 .foodbox {
   display: flex;
@@ -153,18 +183,21 @@ section {
   font-family: yekan;
 }
 /* Extra small devices (phones, 600px and down) */
-@media only screen and (max-width: 600px) {
-  ...;
+@media only screen and (max-width: 768px) {
+  body {
+    background-color: #000000;
+  }
+  .foodbox {
+    width: 500px;
+  }
 }
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
 @media only screen and (min-width: 600px) {
-  ...;
 }
 
 /* Medium devices (landscape tablets, 768px and up) */
 @media only screen and (min-width: 768px) {
-  ...;
 }
 
 /* Large devices (laptops/desktops, 992px and up) */
