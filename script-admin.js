@@ -1,14 +1,14 @@
 const foods = [
     {
         name : "برگ",
-        weight : "280 گرم",
+        weight : "360 گرم",
         price : "920,000 تومان",
         url : "images/barg.jpg"
     },
     {
         name : "لقمه",
         weight : "280 گرم",
-        price : "920,000 تومان",
+        price : "750,000 تومان",
         url : "images/lghome.jpg"
     }
 ]
@@ -22,7 +22,7 @@ item.innerHTML += `
             <div class="foodbox">
                 <div class="caption">
                   <h4 id="foodname">${foods[i].name}</h4>
-                  <input type="button" value="edit" onclick="cheangename()"/>
+                  <input type="button" value="edit" onclick="cheangename(${i})"/>
                   
                   <h6 id="weight">${foods[i].weight}</h6>
                   <input type="button" value="edit" onclick="cheangeweight()"/>
@@ -38,12 +38,7 @@ item.innerHTML += `
                 </div>
             </div>`
             
-function cheangename(){
-  const change = prompt("نام غذا را عوض کنید")
-  foods[i].name = change
-  const foodname = document.getElementById("foodname")
-  foodname.innerText=foods[i].name
-}
+
 function cheangeweight(){
   const change = prompt("نام غذا را عوض کنید")
   foods[i].weight = change
@@ -58,3 +53,11 @@ function cheangeprice(){
 }
 
 }
+function cheangename(index){
+  const change = prompt("نام غذا را عوض کنید")
+  foods[index].name = change
+  const foodname = document.getElementById("foodname")
+  foodname.innerText=foods[index].name
+  console.log(foods[index]);
+}
+

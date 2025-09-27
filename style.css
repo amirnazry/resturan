@@ -170,8 +170,13 @@ section {
   left: 20px;
   bottom: 20px;
   position: fixed;
-  display: none;
   transition: 1s;
+  border-radius: 10px;
+  padding: 5px;
+  display: none;
+}
+.shop-modal h5 {
+  margin: 0;
 }
 .shop-modal input {
   margin: 0 10px 10px 0;
@@ -179,14 +184,15 @@ section {
   border: none;
   color: white;
   padding: 5px;
-  font-size: large;
+  font-size: medium;
   font-family: yekan;
+  border-radius: 10px;
+}
+.shop-modal input:hover {
+  cursor: pointer;
 }
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 768px) {
-  body {
-    background-color: #000000;
-  }
   .foodbox {
     width: 500px;
   }

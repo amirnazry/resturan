@@ -78,7 +78,8 @@ function shopbuket(index){
                 </div>
               </div>`
               
-}
+    
+            }
 
 
 const showshopbtn = document.getElementById("showshopbtn")
@@ -91,4 +92,3 @@ function closeShop(){
   backshopsidebar.style.display = "none"
 
 }
-totalprice.innerHTML += foods[0].price + foods[1].price + " تومان"
